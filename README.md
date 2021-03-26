@@ -1,6 +1,6 @@
 # Sample app made for Greenmile tech test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The app can be seen online [**here**](https://maurogadelha-greenmile-test.netlify.app).
 
 ## Gogle Maps API Key
 
