@@ -1,5 +1,5 @@
 {
-  "name": "greenmile",
+  "name": "greenmile-test",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -23,8 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "lint": "eslint --fix",
-    "eject": "react-scripts eject"
+    "lint": "eslint --fix"
   },
   "eslintConfig": {
     "extends": [
