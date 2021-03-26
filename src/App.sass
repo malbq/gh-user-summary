@@ -1,0 +1,22 @@
+@import './styles/bootstrap'
+
+.App
+  height: 100vh
+  +center
+  flex-direction: column
+
+  &-layout
+    display: grid
+    grid-template: auto auto / repeat(2, 300px)
+    gap: 48px 48px
+    grid-template-areas: "input input" "user repos"
+
+  &-findUserInput
+    grid-area: input
+    +center
+
+  &-userInfo
+    grid-area: user
+
+  &-repoList
+    grid-area: repos
