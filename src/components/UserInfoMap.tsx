@@ -27,12 +27,8 @@ function UserInfoMap ({ location }: Props) {
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_API_KEY ?? ''
   })
 
-  const [requestError, setRequestError] = useState<string | null>(null)
-
-  const [center, setCenter] = useState<LatLng>({
-    lat: 0,
-    lng: 0
-  })
+  const [requestError, setRequestError] = useState<string | false>(false)
+  const [center, setCenter] = useState<LatLng>({ lat: 0, lng: 0 })
 
   useEffect(() => {
     if (location) {
