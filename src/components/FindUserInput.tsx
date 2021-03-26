@@ -5,7 +5,7 @@ import { fetchUser } from '../services/github'
 
 function FindUserInput () {
   const { setUser } = useFoundUser()
-  const [username, setUsername] = useState('maurogadelha')
+  const [username, setUsername] = useState('')
   const [loading, setLoading] = useState(false)
 
   const onChange = useCallback((event) => {
