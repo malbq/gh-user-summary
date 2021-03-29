@@ -1,8 +1,8 @@
 import React from 'react'
 import './App.sass'
-import FindUserInput from './components/FindUserInput'
-import UserInfo from './components/UserInfo'
-import RepoList from './components/RepoList'
+import FindUserInput from './components/FindUserInput/FindUserInput'
+import UserInfo from './components/UserInfo/UserInfo'
+import RepoList from './components/RepoList/RepoList'
 import { useFoundUser } from './contexts/FoundUserContext'
 
 function App () {

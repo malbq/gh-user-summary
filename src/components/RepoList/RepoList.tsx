@@ -2,12 +2,15 @@ import React from 'react'
 import { BiStar } from 'react-icons/bi'
 import './RepoList.sass'
 import RepoListItem from './RepoListItem'
-import { useFoundUser } from '../contexts/FoundUserContext'
+import { useFoundUser } from '../../contexts/FoundUserContext'
 
 function RepoList () {
   const { user } = useFoundUser()
 
-  return <div className="RepoList">
+  return <div
+    className="RepoList"
+    data-testid="RepoList"
+  >
     <div className="RepoList-header">
       <BiStar
         className="RepoList-header-icon"

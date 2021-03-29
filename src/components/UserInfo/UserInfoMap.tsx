@@ -5,8 +5,8 @@ import {
   useJsApiLoader
 } from '@react-google-maps/api'
 import './UserInfoMap.sass'
-import { fromAddress } from '../services/geocode'
-import { LatLng } from '../interfaces/GoogleMaps'
+import { fromAddress } from '../../services/geocode'
+import { LatLng } from '../../interfaces/GoogleMaps'
 
 type Props = {
   location: string

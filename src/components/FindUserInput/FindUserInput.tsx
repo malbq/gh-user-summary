@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react'
 import './FindUserInput.sass'
-import { useFoundUser } from '../contexts/FoundUserContext'
-import { fetchUser } from '../services/github'
+import { useFoundUser } from '../../contexts/FoundUserContext'
+import { fetchUser } from '../../services/github'
 import { AxiosError } from 'axios'
 
 function FindUserInput () {
@@ -38,6 +38,7 @@ function FindUserInput () {
     <form
       className="FindUserInput"
       onSubmit={onSubmit}
+      data-testid="FindUserForm"
     >
       <div className="FindUserInput-container">
         <input
@@ -46,19 +47,27 @@ function FindUserInput () {
           placeholder="Digite um nome de usuário do Github"
           value={username}
           onChange={onChange}
+          data-testid="FindUserInput"
         />
         {loading
-          ? <div className="FindUserInput-loading">
+          ? <div
+            className="FindUserInput-loading"
+            data-testid="FindUserLoading"
+          >
               <img src="./spinner.svg" />
             </div>
           : <button
               className="FindUserInput-submit"
               type="submit"
+              data-testid="FindUserSubmit"
             >
               <img src="./find.svg" />
             </button>}
       </div>
-      {requestError && <div className="FindUserInput-error">
+      {requestError && <div
+        className="FindUserInput-error"
+        data-testid="FindUserError"
+      >
         {requestError}
       </div>}
     </form>
