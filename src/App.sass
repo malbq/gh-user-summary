@@ -1,15 +1,34 @@
 @import './styles/bootstrap'
 
 .App
-  height: 100vh
-  +center
-  flex-direction: column
+  padding: 24px
+
+  +mq_sm
+    height: 100vh
+
+  +mq_md
+    padding: 48px
+    +center
+    flex-direction: column
 
   &-layout
+    margin: 0 auto
     display: grid
-    grid-template: auto auto / repeat(2, 300px)
-    gap: 48px 48px
-    grid-template-areas: "input input" "user repos"
+    grid-template: repeat(3, auto) / 100%
+    grid-template-areas: "input" "user" "repos"
+    gap: 24px
+    max-width: 320px
+
+    +mq_sm
+      grid-template: auto auto / repeat(2, calc(50vw - 36px))
+      grid-template-areas: "input input" "user repos"
+      height: 100%
+      max-width: 100%
+
+    +mq_md
+      grid-template-columns: repeat(2, 300px)
+      gap: 48px
+
 
   &-findUserInput
     grid-area: input
@@ -17,6 +36,13 @@
 
   &-userInfo
     grid-area: user
+    margin: -4px -8px 0
+    padding: 4px 8px 12px
+    overflow-y: auto
 
   &-repoList
     grid-area: repos
+    overflow-x: visible
+    margin: -4px -8px 0
+    padding: 4px 8px 12px
+    overflow-y: auto

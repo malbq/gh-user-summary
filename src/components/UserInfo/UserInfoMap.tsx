@@ -13,7 +13,7 @@ type Props = {
 }
 
 const containerStyle = {
-  width: '268px',
+  width: '100%',
   height: '268px'
 }
 
@@ -48,6 +48,7 @@ function UserInfoMap ({ location }: Props) {
     mapContainerStyle={containerStyle}
     center={center}
     options={mapOptions}
+    onBoundsChanged={() => { console.log('on bounds changed') }}
   >
     <Marker position={center} />
   </GoogleMap>

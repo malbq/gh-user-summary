@@ -9,19 +9,19 @@ function App () {
   const { user } = useFoundUser()
 
   return <div className="App">
-    <div className="App-layout">
-      <div className="App-findUserInput">
-        <FindUserInput />
+      <div className="App-layout">
+        <div className="App-findUserInput">
+          <FindUserInput />
+        </div>
+        {user && <>
+          <div className="App-userInfo">
+            <UserInfo />
+          </div>
+          <div className="App-repoList">
+            <RepoList />
+          </div>
+        </>}
       </div>
-      {user && <>
-        <div className="App-userInfo">
-          <UserInfo />
-        </div>
-        <div className="App-repoList">
-          <RepoList />
-        </div>
-      </>}
-    </div>
   </div>
 }
 
