@@ -17,7 +17,7 @@ function RepoList () {
         color="#E1E9EE"
         size={20}
       />
-      Repositórios com estrela
+      Starred repositories
     </div>
     {user?.starred.map(repo => (
       <RepoListItem

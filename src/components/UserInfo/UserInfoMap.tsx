@@ -42,13 +42,12 @@ function UserInfoMap ({ location }: Props) {
 
   if (requestError) return <div className="UserInfoMap-error">{requestError}</div>
 
-  if (!isLoaded) return <div className="UserInfoMap-loading">loading...</div>
+  if (!isLoaded) return <div className="UserInfoMap-loading">Loading...</div>
 
   return <GoogleMap
     mapContainerStyle={containerStyle}
     center={center}
     options={mapOptions}
-    onBoundsChanged={() => { console.log('on bounds changed') }}
   >
     <Marker position={center} />
   </GoogleMap>

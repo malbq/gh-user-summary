@@ -21,7 +21,7 @@ function UserInfo () {
       <img
         className="UserInfo-avatar"
         src={user?.avatar_url}
-        alt={`Avatar de ${user?.name}`}
+        alt={`${user?.name}'s avatar`}
         data-testid="UserInfoAvatar"
         />
       <div

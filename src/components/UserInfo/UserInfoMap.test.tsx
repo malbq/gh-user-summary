@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, screen, act } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import {
   GoogleMap,
   Marker,
@@ -11,6 +11,7 @@ import { fromAddress } from '../../services/geocode'
 jest.mock('../../services/geocode')
 jest.mock('@react-google-maps/api')
 
+// FIXME
 test.skip('renders map and marker from location', () => {
   GoogleMap.mockImplementation(
     ({ children }) => <div data-testid="GoogleMap">{children}</div>
@@ -26,16 +27,4 @@ test.skip('renders map and marker from location', () => {
     .toBeInTheDocument()
   expect(screen.getByTestId('Marker'))
     .toBeInTheDocument()
-})
-
-test.skip('renders loading message', () => {
-  expect(1).toBeTruthy()
-})
-
-test.skip('error on loading map', () => {
-  expect(1).toBeTruthy()
-})
-
-test.skip('error on requesting location coordinates', () => {
-  expect(1).toBeTruthy()
 })

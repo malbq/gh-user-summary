@@ -1,10 +1,12 @@
-# Sample app made for Greenmile tech test
+# Github user summary tech test
 
-The app can be seen online [**here**](https://maurogadelha-greenmile-test.netlify.app).
+The app can be seen online [**here**](https://gh-user-summary.netlify.app).
 
 ## Gogle Maps API Key
 
 **You must provide your own API key on** `.env`
+
+You can create a `.env.local` file and set `REACT_APP_GOOGLE_API_KEY` value to overwrite the API key.
 
 ## Available Scripts
 

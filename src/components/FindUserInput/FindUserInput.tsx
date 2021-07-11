@@ -24,9 +24,9 @@ function FindUserInput () {
         setUser(user)
       } catch (error) {
         if ((error as AxiosError).response?.status === 404) {
-          setRequestError('Usuário não encontrado')
+          setRequestError('User not found')
         } else {
-          setRequestError('Ocorreu um erro durante a busca')
+          setRequestError('An error occurred during search')
         }
       } finally {
         setLoading(false)
@@ -44,7 +44,7 @@ function FindUserInput () {
         <input
           className="FindUserInput-input"
           type="text"
-          placeholder="Digite um nome de usuário do Github"
+          placeholder="Type a Github™ user name"
           value={username}
           onChange={onChange}
           data-testid="FindUserInput"
